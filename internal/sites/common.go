@@ -2,8 +2,13 @@ package sites
 
 import (
 	"html/template"
+	"log"
 	"net/http"
+
+	"github.com/gorilla/sessions"
 )
+
+var Store = sessions.NewCookieStore([]byte("awwwards_mock_secret_key_2026"))
 
 type PageData struct {
 	Brand       string
@@ -13,6 +18,8 @@ type PageData struct {
 	CartCount   int
 	Query       string
 	Success     bool
+	UserEmail   string
+	IsLoggedIn  bool
 }
 
 const Layout = `
@@ -36,12 +43,24 @@ const Layout = `
 `
 
 func Render(w http.ResponseWriter, headTmpl, contentTmpl string, data PageData) {
-	tmpl, _ := template.New("layout").Parse(Layout)
+	tmpl, err := template.New("layout").Parse(Layout)
+	if err != nil {
+		log.Printf("Layout parse error: %v\n", err)
+	}
 	if headTmpl != "" {
-		tmpl.New("head").Parse(headTmpl)
+		_, err = tmpl.New("head").Parse(headTmpl)
+		if err != nil {
+			log.Printf("Head parse error: %v\n", err)
+		}
 	} else {
 		tmpl.New("head").Parse("")
 	}
-	tmpl.New("content").Parse(contentTmpl)
-	tmpl.Execute(w, data)
+	_, err = tmpl.New("content").Parse(contentTmpl)
+	if err != nil {
+		log.Printf("Content parse error: %v\n", err)
+	}
+	err = tmpl.Execute(w, data)
+	if err != nil {
+		log.Printf("Template execute error: %v\n", err)
+	}
 }
