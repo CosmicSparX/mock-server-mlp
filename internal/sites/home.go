@@ -120,9 +120,9 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
             <div class="w-16 h-16 border-2 border-white rounded-xl mx-auto flex items-center justify-center mb-8 rotate-45 transform transition hover:rotate-90 duration-500">
                 <div class="w-8 h-8 border-2 border-transparent bg-white rounded-sm -rotate-45"></div>
             </div>
-            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-4">Origin<span class="text-gray-500">.</span></h1>
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-4">mock.csx.codes<span class="text-gray-500">.</span></h1>
             <p class="text-xl text-gray-400 font-light tracking-wide max-w-lg mx-auto">
-                A staging environment featuring three distinct, production-ready web experiences.
+                A staging environment 
             </p>
         </header>
 
