@@ -35,12 +35,9 @@ const Layout = `
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <title>{{.Title}} | {{.Brand}}</title>
 	<link href="https://mock.csx.codes/" hreflang="x-default" rel="alternate">
-
 	<link href="https://hi.mock.csx.codes/" hreflang="hi" rel="alternate">
-
 	<link href="https://ja.mock.csx.codes/" hreflang="ja" rel="alternate">
-
-	<script src="https://script-cdn.multilipi.com/static/JS/page_translations.js" multilipi-key="61d1bfb7-95bd-42b6-a0ad-1b9d0308228c" mode="auto" data-pos-x="50" data-pos-y="50" crossorigin="anonymous" defer>
+	<script src="https://script-cdn.multilipi.com/static/JS/page_translations.js" multilipi-key="a03ee978-5371-4105-bbf7-f62704bc08d2" mode="auto" data-pos-x="50" data-pos-y="50" crossorigin="anonymous" defer>
 	</script>
     {{template "head" .}}
 </head>
