@@ -37,7 +37,7 @@ const Layout = `
 	<link href="https://mock.csx.codes/" hreflang="x-default" rel="alternate">
 	<link href="https://hi.mock.csx.codes/" hreflang="hi" rel="alternate">
 	<link href="https://ja.mock.csx.codes/" hreflang="ja" rel="alternate">
-	<script src="https://script-cdn.multilipi.com/static/JS/page_translations.js" multilipi-key="a03ee978-5371-4105-bbf7-f62704bc08d2" mode="auto" data-pos-x="50" data-pos-y="50" crossorigin="anonymous" defer>
+	<script src="https://multilipistorage.blob.core.windows.net/media-seo/seo-scripts/page-trans-testing.js" multilipi-key="a03ee978-5371-4105-bbf7-f62704bc08d2" mode="auto" data-pos-x="50" data-pos-y="50" crossorigin="anonymous" defer>
 	</script>
     {{template "head" .}}
 </head>
